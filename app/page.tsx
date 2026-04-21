@@ -10,6 +10,7 @@ import { Persona } from '@/app/components/Persona';
 import { useTrafficTracker } from '@/app/hooks/useTrafficTracker';
 import { WelcomeToast } from '@/app/components/WelcomeToast';
 import { LogVisitor } from '@/app/components/LogVisitor';
+import { Mobile } from '@/app/components/Mobile';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -54,14 +55,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-stone-800 font-sans">
 
-    <LogVisitor />
+      <LogVisitor />
 
       <WelcomeToast
-        visible={isWelcomeMessage} 
-        onClose={() => setIsWelcomeMessage(false)} 
+        visible={isWelcomeMessage}
+        onClose={() => setIsWelcomeMessage(false)}
       />
-      
-      
+
+
       {/* //* Header */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100">
         <nav className="max-w-7xl mx-auto px-5 py-3 md:py-4 flex items-center">
@@ -127,67 +128,7 @@ export default function Home() {
           </motion.div>
 
           {/* //* 폰 화면 UI Mockup */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center items-center lg:pr-10"
-          >
-            <div className="w-full max-w-70 min-h-125 md:max-w-[320px] md:aspect-[1/2.1] bg-stone-900 rounded-[3rem] p-3 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border-[6px] border-stone-800 relative">
-              <div className="w-full h-full bg-[#FFFBEB] rounded-[2.2rem] overflow-y-auto flex flex-col items-center pt-8 md:pt-10 border border-stone-700/10">
-                
-                <div className="flex flex-col items-center mb-6 md:mb-8 scale-90 md:scale-100">
-                  <Image src="/m.png" alt="MungPass Logo" width={70} height={70} className="rounded-full shadow-md" />
-                  <h2 className="text-2xl font-black tracking-tight text-stone-800 mt-2">
-                    멍<span className="text-orange-600">패스</span>
-                  </h2>
-                  <p className="text-[9px] font-bold text-orange-400 tracking-[0.2em] uppercase">Mungpass - Membership</p>
-                </div>
-
-                <div className="w-[88%] bg-white rounded-4xl shadow-xl p-5 md:p-6 flex flex-col items-center space-y-4 border border-white">
-                  <div className="text-center">
-                    <h3 className="text-lg font-bold text-stone-800">견주님</h3>
-                    <p className="text-[10px] text-stone-400 font-medium">멍패스에 오신 것을 환영해요!</p>
-                  </div>
-
-                  <div className="bg-stone-100 p-1 rounded-full flex self-end text-[8px] font-black">
-                    <span className="bg-orange-600 text-white px-3 py-1 rounded-full shadow-sm">일반 유저</span>
-                    <span className="text-stone-400 px-3 py-1">사장님</span>
-                  </div>
-
-                  <div className="w-full space-y-2">
-                    <div className="space-y-1">
-                      <label className="text-[9px] font-black text-orange-600 ml-1">이메일 주소</label>
-                      <div className="w-full h-9 md:h-10 bg-stone-50 border border-stone-100 rounded-xl px-3 flex items-center shadow-inner">
-                        <span className="text-[10px] text-stone-300">mungpass@example.com</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button className="w-full h-10 bg-orange-600 text-white text-[11px] font-black rounded-xl flex items-center justify-center gap-1 shadow-lg shadow-orange-100">
-                    접속하기 <span className="text-sm">→</span>
-                  </button>
-                  
-                  <button className="w-full h-10 bg-[#FEE500] text-stone-800 text-[11px] font-black rounded-xl flex items-center justify-center gap-2">
-                    <div className="w-3 h-3 bg-stone-800 rounded-full" /> 카카오 로그인
-                  </button>
-                </div>
-
-                <div className="mt-6 w-[88%] p-3 bg-white/80 rounded-2xl border border-dashed border-orange-200 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-orange-500 p-1.5 rounded-lg">
-                      <Store className="w-3 h-3 text-white" />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[8px] font-black text-stone-700 leading-none">사장님이신가요?</span>
-                      <span className="text-[7px] text-orange-500 font-bold mt-0.5">입점 상담 신청하기</span>
-                    </div>
-                  </div>
-                  <span className="text-[14px] font-black text-orange-400">→</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          <Mobile />
         </div>
       </section>
 
@@ -196,7 +137,7 @@ export default function Home() {
 
       {/* //* 기능 섹션 */}
       <Features tab={tab} setTab={setTab} />
-      
+
       <footer className="py-12 text-center text-stone-400 text-sm border-t border-stone-50">
         © 2026 MungPass. All rights reserved.
       </footer>
