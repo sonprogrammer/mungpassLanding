@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Features } from '@/app/components/Features';
 import { Persona } from '@/app/components/Persona';
+import { useTrafficTracker } from '@/app/hooks/useTrafficTracker';
+import { WelcomeToast } from '@/app/components/WelcomeToast';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -43,11 +45,20 @@ const scrollRight: Variants = {
 export default function Home() {
   const [tab, setTab] = useState<'user' | 'owner'>('user')
 
+  const { isWelcomeMessage, setIsWelcomeMessage } = useTrafficTracker()
+
   const ownerImg = ["/owner-kiosk.png", "/owner-main.png", "/owner-managekiosk.png", "/owner-manageStore.png", "/owner-notification.png", "/owner-productmanage.png", "/owner-static.png", "/owner-storetime.png", "/owner-usetable.png"]
   const userImg = ["/user-around.png", "/user-main.png", "/user-mypage.png", "/user-mypet.png", "/user-realtime.png"]
 
   return (
     <div className="min-h-screen bg-white text-stone-800 font-sans">
+
+      <WelcomeToast
+        visible={isWelcomeMessage} 
+        onClose={() => setIsWelcomeMessage(false)} 
+      />
+      
+      
       {/* //* Header */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100">
         <nav className="max-w-7xl mx-auto px-5 py-3 md:py-4 flex items-center">
