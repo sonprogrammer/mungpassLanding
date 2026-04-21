@@ -9,6 +9,7 @@ import { Features } from '@/app/components/Features';
 import { Persona } from '@/app/components/Persona';
 import { useTrafficTracker } from '@/app/hooks/useTrafficTracker';
 import { WelcomeToast } from '@/app/components/WelcomeToast';
+import { LogVisitor } from '@/app/components/LogVisitor';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -52,6 +53,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-stone-800 font-sans">
+
+    <LogVisitor />
 
       <WelcomeToast
         visible={isWelcomeMessage} 
