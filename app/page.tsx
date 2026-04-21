@@ -133,8 +133,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center items-center lg:pr-10"
           >
-            <div className="w-full max-w-70 md:max-w-[320px] aspect-[1/2.1] bg-stone-900 rounded-[3rem] p-3 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border-[6px] border-stone-800 relative">
-              <div className="w-full h-full bg-[#FFFBEB] rounded-[2.2rem] overflow-hidden flex flex-col items-center pt-8 md:pt-10 border border-stone-700/10">
+            <div className="w-full max-w-70 min-h-125 md:max-w-[320px] md:aspect-[1/2.1] bg-stone-900 rounded-[3rem] p-3 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border-[6px] border-stone-800 relative">
+              <div className="w-full h-full bg-[#FFFBEB] rounded-[2.2rem] overflow-y-auto flex flex-col items-center pt-8 md:pt-10 border border-stone-700/10">
                 
                 <div className="flex flex-col items-center mb-6 md:mb-8 scale-90 md:scale-100">
                   <Image src="/m.png" alt="MungPass Logo" width={70} height={70} className="rounded-full shadow-md" />
