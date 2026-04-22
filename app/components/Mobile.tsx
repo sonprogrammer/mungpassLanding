@@ -12,11 +12,11 @@ export function Mobile() {
             }
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center items-center lg:pr-10 w-full"
+            className="flex justify-center items-center w-full"
         >
-            <div className="w-full max-w-70 md:max-w-[320px] h-auto min-h-145 md:aspect-[1/2.1] bg-stone-900 rounded-[3rem] p-3 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border-[6px] border-stone-800 relative" >
+            <div className="w-full max-w-70 md:max-w-[320px] h-fit  bg-stone-900 rounded-[3rem] p-3  border-[6px] relative" >
 
-                <div className="w-full h-full bg-[#FFFBEB] rounded-[2.2rem] overflow-hidden flex flex-col items-center py-6 md:pt-10 border border-stone-700/10" >
+                <div className="w-full  bg-[#FFFBEB] rounded-[2.2rem] overflow-hidden flex flex-col items-center py-6 md:pt-10 border border-stone-700/10" >
 
                     <div className="flex flex-col items-center mb-4 md:mb-8 scale-90 md:scale-100" >
                         <Image src="/m.png" alt="MungPass Logo" width={60} height={60} className="rounded-full shadow-md" />
