@@ -50,7 +50,7 @@ export function WelcomeToast({ visible, onClose }: { visible: boolean; onClose: 
               </div>
 
 
-              <div className="bg-stone-50 rounded-3xl p-4 border border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              {/* <div className="bg-stone-50 rounded-3xl p-4 border border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-orange-600 font-black text-[10px] uppercase tracking-widest">
                     <Key className="w-3 h-3" />
@@ -78,7 +78,7 @@ export function WelcomeToast({ visible, onClose }: { visible: boolean; onClose: 
                     <><Copy className="w-3.5 h-3.5" /> 계정 복사</>
                   )}
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <motion.div
